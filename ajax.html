@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Rokkitt&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="ajax.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <script src='main.js'></script>
+    </head>
+    <body>
+        <center>
+            <button id="fetch-btn" type="button" onclick="loadfunc()" class="btn btn-outline-secondary mt-2 mb-3">Click to Fetch Data</button>
+            <input type="radio" name="radio_button" onclick="sort_table('ID')">
+            <input type="radio" name="radio_button" onclick="sort_table('IDBook')">
+            <input type="radio" name="radio_button" onclick="sort_table('FirstName')">
+            <input type="radio" name="radio_button" onclick="sort_table('LastName')">
+            <input type="text" id="ID" onkeyup="searchbook_id()" placeholder="Search for book id.." title="Type in a book id">
+            <input type="text" id="bookID" onkeyup="searchbook_id()" placeholder="Search for book id.." title="Type in a book id">
+            <input type="text" id="firstname" onkeyup="searchbook_id()" placeholder="Search for book id.." title="Type in a book id">
+            <input type="text" id="lastname" onkeyup="searchbook_id()" placeholder="Search for book id.." title="Type in a book id">
+
+            <div id="three_btn_box" class="mt-2 mb-3" style="display: none;">
+                
+                <button type="button" class="btn btn-outline-secondary" onclick="rows_change(10)">10</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="rows_change(15)">15</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="rows_change(20)">20</button>
+            </div>
+        </center>
+        <div id="fixed_box" class="fixed-box styled-underline">
+            <h2>Click On the button above to fetch <br>the Author's Data</button></h1>
+        </div>
+        <div class="container">
+            <table id="demo"></table>
+        </div>
+        <center>
+        <button type="button" onclick="prev_page()" class="btn btn-outline-secondary mt-2 mb-3">Previous</button>
+        <button id = "page1" type="button" onclick="skip_page('page1')" class="btn btn-outline-secondary mt-2 mb-3 value_change active">1</button>
+        <button id = "page2" type="button" onclick="skip_page('page2')" class="btn btn-outline-secondary mt-2 mb-3 value_change">2</button>
+        <button id = "page3" type="button" onclick="skip_page('page3')" class="btn btn-outline-secondary mt-2 mb-3 value_change">3</button>
+        <button type="button" onclick="next_page()" class="btn btn-outline-secondary mt-2 mb-3">Next</button>
+        
+        </center>
+        <center id="last_btns">
+
+        </center>
+
+
+
+          <div class="modal fade" id="tableData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header mx-auto">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Selected Authors Data</h5>
+                </div>
+                <div class="modal-body">
+                    <table id="demo2"></table>
+                </div>
+                <div class="modal-footer mx-auto">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </body>
+</html>

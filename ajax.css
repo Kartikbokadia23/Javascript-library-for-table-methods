@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.fixed-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 0px 0px 15px rgb(218, 209, 210); */
+}
+.fixed-box h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;   
+}
+table {
+    width: 100%;
+    border : none;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 15px rgb(231, 206, 210);
+}
+tr{
+    background: linear-gradient(144deg, rgba(3,40,161,1) 0%, rgba(160,156,181,1) 85%);
+}
+tr:hover{
+    background: linear-gradient(144deg, rgba(71,95,173,1) 0%, rgba(180,177,196,1) 85%);
+}
+th{
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+}
+td{
+    font-family: 'Rokkitt', serif;
+}
+th,td {
+    font-size: 30px;
+    padding: 20px;
+    width: 25%;
+    text-align: center;
+}
+.fetched_row{
+    background-color: rgba(255,255,255,1);
+}
