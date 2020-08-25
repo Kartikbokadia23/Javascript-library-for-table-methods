@@ -1,1 +1,0 @@
-# Javascript-library-for-table-methods
